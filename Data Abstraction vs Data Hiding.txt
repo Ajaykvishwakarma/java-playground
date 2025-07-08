@@ -1,0 +1,6 @@
+| Concept        | Data Abstraction                                                      | Data Hiding                                                        |
+| -------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Definition     | Hiding **implementation details** and showing only essential features | Restricting access to internal data using **access specifiers**    |
+| Purpose        | Focuses on **what** the object does                                   | Focuses on **how** data is accessed                                |
+| Implementation | Achieved via **interfaces** or **abstract classes**                   | Achieved using **private/protected** members                       |
+| Example        | Abstract class hiding internal logic of a method                      | Making class variables `private` and accessing via `getter/setter` |

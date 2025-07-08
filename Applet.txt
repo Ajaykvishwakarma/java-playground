@@ -1,0 +1,115 @@
+1. Applet Lifecycle with Diagram
+✅ Applet Lifecycle Phases:
+init() – Called once when the applet is loaded.
+
+start() – Called each time the applet becomes active.
+
+paint(Graphics g) – Called to redraw the applet.
+
+stop() – Called when the applet is no longer visible.
+
+destroy() – Called when the applet is destroyed.
+
+
+              +-----------------+
+              |     init()      |
+              +--------+--------+
+                       |
+              +--------v--------+
+              |     start()     |
+              +--------+--------+
+                       |
+              +--------v--------+
+              |     paint()     |
+              +--------+--------+
+                       |
+              +--------v--------+
+              |     stop()      |
+              +--------+--------+
+                       |
+              +--------v--------+
+              |   destroy()     |
+              +----------------+
+
+
+2. Difference between Applet and Application
+
+
+| Feature           | Applet                                     | Application                            |
+| ----------------- | ------------------------------------------ | -------------------------------------- |
+| Execution         | Runs in a browser or applet viewer         | Runs via `main()` method on JVM        |
+| `main()` method   | Not required                               | Required                               |
+| GUI Support       | Uses AWT/Swing, embedded in HTML           | Can use AWT/Swing/JavaFX independently |
+| Security          | Restricted (sandboxed)                     | Less restricted                        |
+| Lifecycle methods | `init()`, `start()`, `stop()`, `destroy()` | `main()` only                          |
+
+
+
+3. Write Applet to Draw a Circle or Triangle
+✅ Example: Draw a Circle
+
+import java.applet.Applet;
+import java.awt.Graphics;
+
+/*
+<applet code="DrawCircle.class" width="300" height="300">
+</applet>
+*/
+
+public class DrawCircle extends Applet {
+    public void paint(Graphics g) {
+        g.drawOval(100, 100, 100, 100); // x, y, width, height
+    }
+}
+
+
+✅ Example: Draw a Triangle
+
+import java.applet.Applet;
+import java.awt.*;
+
+/*
+<applet code="DrawTriangle.class" width="300" height="300">
+</applet>
+*/
+
+public class DrawTriangle extends Applet {
+    public void paint(Graphics g) {
+        int x[] = {100, 150, 200};
+        int y[] = {200, 100, 200};
+        g.drawPolygon(x, y, 3);
+    }
+}
+
+
+4. What is a Layout Manager? Explain Flow, Border, and Grid Layout
+A Layout Manager in Java AWT/Swing controls the size and position of components in a container.
+
+
+✅ FlowLayout
+Default layout for Applet and Panel.
+
+Places components in a row, left to right, wrapping to the next line.
+
+setLayout(new FlowLayout());
+add(new Button("One"));
+add(new Button("Two"));
+
+
+
+✅ BorderLayout
+Divides container into five regions: North, South, East, West, Center.
+
+setLayout(new BorderLayout());
+add(new Button("Top"), BorderLayout.NORTH);
+add(new Button("Bottom"), BorderLayout.SOUTH);
+
+
+✅ GridLayout
+Arranges components in a grid of rows and columns.
+
+setLayout(new GridLayout(2, 2)); // 2 rows, 2 columns
+add(new Button("1"));
+add(new Button("2"));
+add(new Button("3"));
+add(new Button("4"));

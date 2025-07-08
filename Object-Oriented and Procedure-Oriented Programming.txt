@@ -1,0 +1,7 @@
+| Feature          | Object-Oriented Programming (OOP) | Procedure-Oriented Programming (POP) |
+| ---------------- | --------------------------------- | ------------------------------------ |
+| Approach         | Based on **objects**              | Based on **functions or procedures** |
+| Focus            | Focuses on **data**               | Focuses on **functions**             |
+| Data Security    | Data is hidden (encapsulation)    | Global data, less secure             |
+| Code Reusability | Achieved through inheritance      | Limited reusability                  |
+| Examples         | Java, C++, Python (OOP)           | C, Fortran                           |

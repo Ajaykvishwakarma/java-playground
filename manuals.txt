@@ -1,0 +1,7 @@
+to run any java file: 
+
+javac mainclasssname.java
+java mainclasssname
+
+
+
